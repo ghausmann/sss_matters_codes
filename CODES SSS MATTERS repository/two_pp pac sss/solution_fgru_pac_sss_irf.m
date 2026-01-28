@@ -141,11 +141,13 @@ eps_ind = find(x=='eps'); %index of epsilon in state vector xt
 %depreciation in auxiliary model)
 sss_sol = compute_betta_fgru_3p(D1,model,params,my_dss_params,M,eta,eps_ind,approx0,[-0.01 0.9*log(Kstar0) 0])
 params(symparams=='psibetta') = sss_sol(1);
+% save_path = fullfile(my_root,'estimated parameters\my_sss_sol.mat');
+% save(save_path,'sss_sol');
 lK1 = sss_sol(2);
 %Check that the SSS calibration delivers the targeted SSS
 check_sss = compute_sss_fgru_3p(model,params,my_dss_params,M,eta,eps_ind,approx0,[D1 lK1 0])
 
-%Compute aux. DSS and change parameter values ias needed
+%Compute aux. DSS and change parameter values as needed
 [nxss,nyss,psi_k,C_bar] = my_dss_aux([D1 sss_sol(2:3)],my_dss_params)
 params(symparams=='D_bar') = D1;
 params(symparams=='psi_k') = psi_k;
@@ -227,8 +229,6 @@ for t=1:mT
     end
 end
 toc
-
-errors_stats = ([mean(lerrors) max(lerrors)])
 
 figure;
 subplot(2,3,1);plot(Ct,my_color,'LineWidth',2);title('Consumption', 'FontSize', 12);

@@ -16,8 +16,7 @@ act_pruning = 1;
 perform_estimate = 0;
 %Choose whether to save estimation results
 save_estimate = 0;
-%Choose whether to also compute Euler errors, deterministic simulation, and
-%the ergodic distribution of NFA.
+%Choose whether to also compute Euler errors
 compute_errors = 1;
 %Choose approximation order
 approx0 = 2; %order of approximation for SSS

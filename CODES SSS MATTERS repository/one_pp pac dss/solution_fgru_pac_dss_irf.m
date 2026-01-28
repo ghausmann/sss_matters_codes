@@ -1,6 +1,6 @@
 %---------------------------------------------------------------------------
 % FGRU Small open-economy model
-% PAC, approximation around the DSS
+% PAC model, approximation around the DSS
 % This script computes IRFs (for figures 2, 3, 5, 6, 7, 9 and 10 in paper)
 %---------------------------------------------------------------------------
 

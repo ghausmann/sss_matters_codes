@@ -25,16 +25,13 @@ ysss = myt(:,Tsss+1:end);
 y_sss = exp(ysss(5));
 c_sss = exp(ysss(1));
 i_sss = exp(ysss(7));
-
 D_sss = ysss(8);
 r_sss = ysss(3);
 
 %SSS net exports ratio
 nx_y_sss = 100*(y_sss - c_sss - i_sss)/y_sss
 %SSS net exports ratio (alternative way to compute it)
-nx_y_sss_alt = 100*( D_sss*(1 - 1/(1+r_sss)) + 0.5*phi_d*(D_sss-D_bar)^2   )/y_sss
-%Punishment for not holding a D1 exogenous debt level
-crazy_punish = 100*(  0.5*phi_d*(D_sss-D_bar)^2   )/y_sss
+nx_y_sss_alt = 100*( D_sss*(1 - 1/(1+r_sss)) )/y_sss
 %Annualized external debt at DSS
 nfa_dss = 100*nyss(8)/(12*exp(nyss(5)))
 %Annualized external debt at SSS
@@ -60,7 +57,6 @@ Ti = 100;
 T = Ti+Tt;
 replications =200;
 errors =zeros(replications,T+1);
-r_ap = zeros(replications,T+1);
 nfa_t = zeros(replications,T+1);
 
 

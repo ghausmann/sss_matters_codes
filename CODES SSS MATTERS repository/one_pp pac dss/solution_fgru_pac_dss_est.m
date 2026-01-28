@@ -95,7 +95,7 @@ T = Ti+Tt;
 replications = 200;
 sP1 = [rho_eps_tb sigma_tb_bar rho_sigma_tb eta_tb];
 sP2 = [rho_eps_r sigma_r_bar rho_sigma_r eta_r r_bar 0];
-[innovations,rates] = my_innovations(T,replications,sP1,sP2);
+[innovations,~] = my_innovations(T,replications,sP1,sP2);
 
 if Argentina == 1
     load('my_est_params_pac_dss_argentina');

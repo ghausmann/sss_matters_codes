@@ -97,11 +97,10 @@ m_std_y = mean(std_y);
 m_std_c_y = mean(std_c_y);
 m_std_i_y = mean(std_i_y);
 
-
 simulated_moments = zeros(4,1);
 simulated_moments(1)=m_std_y*100;
 simulated_moments(2)= m_std_c_y;
 simulated_moments(3)= m_std_i_y;
 simulated_moments(4)= nx_y_sss;
-%keyboard;
+
 y = simulated_moments - target;

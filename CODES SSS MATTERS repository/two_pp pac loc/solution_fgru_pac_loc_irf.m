@@ -87,14 +87,13 @@ if origin_est==1
     phipar = my_est_params(2); %controls capital adjustment costs
     sigma_x = my_est_params(3); %std. of innovations to productivity
     D1 = my_est_params(4); %SSS debt
+    my_est_params
 else
     phi_d = 0.0002;
-    phipar = 64.5975;
-    sigma_x = -2.8768;
-    D1 = 21.6190;
+    phipar = 50;
+    sigma_x = -3.2567;
+    D1 = 25.7968;
 end
-
-my_est_params
 
 D_bar = D1;
 betta = 1/(1+(r_bar));   %discount factor
@@ -173,7 +172,7 @@ end
 %simulate the model
 [yt,xt]=simul(x0,shocks,nyss,nxss,eta,derivs,approx1,0,model);
 
-% in percent deviations from SSS (except possibly debt, just in deviations)
+% in percent deviations from SSS (except debt, just in deviations over sss output)
 Ct = 100*(exp(yt(y=='C',:)) - c_sss)/c_sss;
 Yt = 100*(exp(yt(y=='Y',:)) - y_sss)/y_sss;
 Dt1 = (yt(y=='Df',:) - D_sss)/y_sss;

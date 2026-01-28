@@ -1,5 +1,5 @@
 function y = euler_errors_fgru_pac(P2,nxss,nyss,derivs,x_1,eta,epsi_nodes,weight_nodes,approx)
-%This function computes Euler equation errors of the SOE 
+%This function computes Euler equation errors of the SOE (PAC model)
 %It assumes the model of interest. 
 %Expectations are approximated with monomials
 %Inputs are P2 (vector of parameters),

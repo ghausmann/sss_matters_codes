@@ -76,7 +76,6 @@ moments = zeros(14,1);
 for t=1:replications
     
     shocks = innovations(:,:,t);
-    
     if pruning==1
         [myt_sim,~]=simul_mod_pruning3(mxt,shocks,nyss,nxss,eta,derivs);
     else

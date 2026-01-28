@@ -13,5 +13,5 @@ solution_fgru_pac_loc_moments: computes simulated moments (Tables 1, 3, and 5)
 solution_fgru_pac_loc_var: computes simulated moments for variance decomposition (Table 2)
 
 INSTRUCTIONS: 
-- Add the parent folder of this repository to the Matlab path (folder only).
+- Add the parent folder of this repository 'CODES SSS MATTERS repository' to the Matlab path (folder only).
 - Make sure you have run the script "prepare_model_fgru_pac_loc" (found in the folder "model pac loc") at least once (make sure the folder is the main MATLAB path when executing)
